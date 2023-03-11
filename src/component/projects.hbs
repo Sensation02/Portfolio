@@ -1,0 +1,22 @@
+<div>
+  {{>link text=name href=url noLine=true}} <br>
+  <div>
+    <p>{{about}}</p>
+  </div>
+  <div><em>“Project stacks”</em> {{stackAmount}}</div> <br>
+  {{#each stack}}
+    <ul>
+      <li>
+        {{name}}
+      </li>
+    </ul>
+  {{/each}} <br>
+  <div><em>“Project awards”</em> {{awardAmount}}</div> <br>
+  {{#each awards}}
+    <ul>
+      <li>
+        {{name}}
+      </li>
+    </ul>
+  {{/each}}
+</div>

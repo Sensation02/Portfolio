@@ -1,0 +1,15 @@
+<div>
+  {{#with main}}
+  <main>
+    <section>
+      {{> title data=summary.title big=true}}
+      {{> text data=summary.text}}
+    </section>
+
+    <section>
+      {{> title data=experience.title}}
+      {{> text data=experience.text}}
+    </section>
+  </main>
+  {{/with}}
+</div>

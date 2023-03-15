@@ -1,0 +1,131 @@
+{{#with program}}
+  <div>
+    <h1>{{excursion.name}}</h1>
+    <address>{{excursion.location.city}},
+      {{excursion.location.country}}</address>
+    <br />
+    <date>{{excursion.date}}</date>
+  </div>
+  <br /><hr />
+  <div>
+    <h2></h2>
+    {{#with excursion.program}}
+      <details open>
+        <summary style='font-size: 22px'>
+          <b>Program</b>
+        </summary>
+        <ol>
+          <li>
+            <strong
+              style='font-size: 21px'
+            >{{0.name}}</strong>
+            <br />
+            <em>{{0.type}}</em>
+            <br />
+            <span>Duration: {{0.duration}} hours</span>
+            <br />
+            <br />
+            <details open>
+              {{#with 0.details.museum}}
+                <summary><b
+                    style='font-size: 20px'
+                  >Details</b></summary>
+                <br />
+                <strong>{{name}}</strong>
+                {{#with location}}
+                  <address>
+                    {{address}},
+                    {{city}},
+                    {{country}}
+                  </address>
+                  <br />
+                {{/with}}
+                {{#each exhibits}}
+                  <ul>
+                    <li>
+                      <strong>{{name}}</strong>
+                      <br />
+                      {{#if artist}}
+                        <em>{{artist}}</em>
+                      {{else}}
+                        <em>Unknown artist</em>
+                      {{/if}}
+                      <br />
+                      Picture:
+                      <q>{{description}}</q>
+                      <br />
+                      {{#if audio_guide}}
+                        With audio accompaniment.
+                      {{/if}}
+                    </li>
+                    <br />
+                  </ul>
+                {{/each}}
+              {{/with}}
+              {{#with 0.details.guide}}
+                <div>
+                  <h3>Guide:</h3>
+                  {{name}}, language:
+                  {{language}}
+                  <br />
+                  rating:
+                  {{rating}}
+                </div>
+              {{/with}}
+            </details>
+            <br />
+            <hr />
+          </li>
+          <li>
+            <strong
+              style='font-size: 21px'
+            >{{1.name}}</strong>
+            <br />
+            <em>{{1.type}}</em>
+            <br />
+            <span>Duration: {{1.duration}} hours</span>
+            <br />
+            <br />
+            <details open>
+              {{#with 1.details.venue}}
+                <summary><b
+                    style='font-size: 20px'
+                  >Details</b></summary>
+                <br />
+                <strong>{{name}}</strong>
+                {{#with location}}
+                  <address>
+                    {{address}},
+                    {{city}},
+                    {{country}}
+                  </address>
+                {{/with}}
+              {{/with}}
+              <h4>Performers</h4>
+              {{#each 1.details.performers}}
+                <ul>
+                  <li>
+                    <strong>{{this.name}}</strong>
+                    <br />
+                    <em>{{this.type}}</em>
+                  </li>
+                </ul>
+              {{/each}}
+              {{#with 1.details.guide}}
+                <div>
+                  <h3>Guide:</h3>
+                  {{name}}, language:
+                  {{language}}
+                  <br />
+                  rating:
+                  {{rating}}
+                </div>{{/with}}
+            </details>
+            <br />
+            <hr />
+          </li>
+        </ol>
+      </details>
+    {{/with}}
+  </div>
+{{/with}}

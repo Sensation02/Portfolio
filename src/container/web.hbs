@@ -1,0 +1,97 @@
+<div>
+  <h1>Web Languages</h1>
+  <ul>
+    {{#each web.languages}}
+      <li>
+        <strong><dt
+            style='font-size: larger;'
+          >{{this.name}}</dt></strong>
+        version:
+        <em>{{this.version}}</em>
+        <br />
+        <dd><q>{{this.description}}</q></dd>
+
+        {{#if this.elements}}
+          <h4>Example of tags</h4>
+          <ul>
+            {{#each this.elements}}
+              <li>
+                <strong><b>{{this.name}}</b></strong>
+                -
+                <q>{{this.description}}</q>
+                <br />
+                <br />
+                <b>Attributes:</b>
+                <br />
+                {{#each this.attributes}}
+                  <ul>
+                    <li>
+                      <b>{{this.name}}</b>
+                      -
+                      {{this.description}}
+                    </li>
+                  </ul>
+                {{/each}}
+              </li>
+              <br />
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if this.properties}}
+          <h4>Example of properties</h4>
+          <ul>
+            {{#each this.properties}}
+              <li>
+                <strong><b>{{this.name}}</b></strong>
+                -
+                <q>{{this.description}}</q>
+                <br />
+                <br />
+                <b>Values:</b>
+                <br />
+                {{#each this.values}}
+                  <ul>
+                    <li>
+                      <b>{{this.value}}</b>
+                      -
+                      {{this.description}}
+                    </li>
+                  </ul>
+                {{/each}}
+              </li>
+              <br />
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if this.functions}}
+          <h4>Example of functions</h4>
+          <ul>
+            {{#each this.functions}}
+              <li>
+                <strong><dt>{{this.name}}</dt></strong>
+                <q>{{this.description}}</q>
+                <br />
+                <br />
+                <b>Parameter:</b>
+                <br />
+                {{#each this.parameters}}
+                  <ul>
+                    <li>
+                      <b>{{this.name}}</b>
+                      -
+                      <em>{{this.type}}</em>
+                      -
+                      {{this.description}}
+                    </li>
+                  </ul>
+                {{/each}}
+              </li>
+              <br />
+            {{/each}}
+          </ul>
+        {{/if}}
+      </li>
+      <hr />
+    {{/each}}
+  </ul>
+</div>

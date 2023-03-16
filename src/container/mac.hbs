@@ -1,0 +1,168 @@
+<div>
+  <h2>
+    {{name}}
+  </h2>
+  <br />
+  <q style='font-size: larger;'>{{description}}</q>
+  <br />
+  <span style='font-size: large;'>Price:</span>
+  <strong style='font-size: larger;'>{{price}} $</strong>
+  <br />
+  <span style='font-size: large;'>Category:</span>
+  <em style='font-size: larger;'>{{category}}</em>
+  <br />
+</div>
+
+<hr />
+
+<div>
+  {{#with features}}
+
+    <ul>
+
+      <li>
+        <b>Processor:</b>
+        {{#with processor}}
+          {{brand}}
+          {{model}},
+          {{speed}},
+          {{cores}}
+          cores,
+          {{cache}}
+          of cache
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Memory:</b>
+        {{#with memory}}
+          {{type}}
+          {{size}}
+          {{speed}}
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Storage:</b>
+        {{#with storage}}
+          {{type}},
+          {{size}}
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Display:</b>
+        {{#with display}}
+          {{size}},
+          {{resolution}},
+          {{technology}},
+          {{color_space}},
+          {{brightness}},
+          {{refresh_rate}}
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Graphics:</b>
+        {{#with graphics}}
+          {{brand}}
+          {{model}},
+          {{memory}}
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Ports:</b>
+        <ul>
+          {{#each ports}}
+            <li>
+              {{type}},
+              {{count}}
+              {{#if features}}
+                <br />
+                <i>Features:</i>
+                <ul>
+                  {{#each features}}
+                    <li>
+                      {{this}}
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+
+      <br />
+
+      <li>
+        <b>Battery:</b>
+        {{#with battery}}
+          {{type}},
+          {{capacity}},
+          {{life}}
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Weight:</b>
+        {{weight}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Dimensions:</b>
+        {{#with dimensions}}
+          <br />
+          height:
+          <i>{{height}}</i>
+          <br />
+          width:
+          <i>{{width}}</i>
+          <br />
+          depth:
+          <i>{{depth}}</i>
+        {{/with}}
+      </li>
+
+      <br />
+
+      <li>
+        <b>Operating System:</b>
+        <em>{{operating_system}}</em>
+      </li>
+
+      <br />
+
+      <li>
+        <b>Accessories</b>
+        <ul>
+          {{#each accessories}}
+            <li>
+              {{this.name}}
+              for
+              {{this.price}}
+              $
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+
+    </ul>
+
+  {{/with}}
+</div>

@@ -902,4 +902,10 @@ router.get('/mac', function (req, res) {
   })
 })
 
+router.get('/bootstrap', function (req, res) {
+  res.render('bootstrap', {
+    layout: 'basic',
+  })
+})
+
 module.exports = router

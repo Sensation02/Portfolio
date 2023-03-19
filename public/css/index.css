@@ -12,6 +12,7 @@ header,
 footer,
 nav {
   margin: 32px;
+  padding: 10px;
 }
 
 section {

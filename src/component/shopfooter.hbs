@@ -1,0 +1,52 @@
+<footer>
+  <div class='row'>
+    <div class='col-3'>
+      <ul class='nav flex-column'>
+        {{#each footer}}
+          <li class='nav-item'>
+            <a
+              href='{{0.link}}'
+              class='nav-link'
+            >{{0.text}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class='col-3'>
+      <ul class='nav flex-column'>
+        {{#each footer}}
+          <li class='nav-item'>
+            <a
+              href='{{1.link}}'
+              class='nav-link'
+            >{{1.text}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class='col-3'>
+      <ul class='nav flex-column'>
+        {{#each footer}}
+          <li class='nav-item'>
+            <a
+              href='{{2.link}}'
+              class='nav-link'
+            >{{2.text}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class='col-3'>
+      <ul class='nav flex-column'>
+        {{#each footer}}
+          <li class='nav-item'>
+            <a
+              href='{{3.link}}'
+              class='nav-link'
+            >{{3.text}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</footer>

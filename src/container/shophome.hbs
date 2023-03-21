@@ -1,34 +1,4 @@
-<nav>
-  <div class='row'>
-    <div class='col-12'>
-      <div class='card p-3'>
-        {{#with navigation}}
-          <div class='nav'>
-            <div class='col-8'>
-              <div class='nav-item'>
-                <h4 class='card-title'>{{Logo}}</h4>
-              </div>
-            </div>
-            <div class='col-4'>
-              <div class='nav justify-content-end'>
-                {{#each links}}
-                  <div class='nav-item'>
-                    <a
-                      href='{{href}}'
-                      class='nav-link text-end'
-                    >
-                      {{text}}
-                    </a>
-                  </div>
-                {{/each}}
-              </div>
-            </div>
-          </div>
-        {{/with}}
-      </div>
-    </div>
-  </div>
-</nav>
+{{> shopheader}}
 
 <section>
   {{#with newsBlock}}
@@ -172,55 +142,4 @@
 
 <hr />
 
-<footer>
-  <div class='row'>
-    <div class='col-3'>
-      <ul class='nav flex-column'>
-        {{#each footer}}
-          <li class='nav-item'>
-            <a
-              href='{{0.link}}'
-              class='nav-link'
-            >{{0.text}}</a>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-    <div class='col-3'>
-      <ul class='nav flex-column'>
-        {{#each footer}}
-          <li class='nav-item'>
-            <a
-              href='{{1.link}}'
-              class='nav-link'
-            >{{1.text}}</a>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-    <div class='col-3'>
-      <ul class='nav flex-column'>
-        {{#each footer}}
-          <li class='nav-item'>
-            <a
-              href='{{2.link}}'
-              class='nav-link'
-            >{{2.text}}</a>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-    <div class='col-3'>
-      <ul class='nav flex-column'>
-        {{#each footer}}
-          <li class='nav-item'>
-            <a
-              href='{{3.link}}'
-              class='nav-link'
-            >{{3.text}}</a>
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-</footer>
+{{> shopfooter}}

@@ -1,0 +1,142 @@
+{{> shopheader }}
+
+<section>
+  <ol class="breadcrumb">
+    {{#each breadcrumb}}
+      <li class="breadcrumb-item">
+        <a href="{{url}}" class="breadcrumb-link">
+          {{name}}
+        </a>
+      </li>
+    {{/each}}
+  </ol>
+</section>
+
+<section>
+  {{#with productData}}
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <img src="{{img}}" alt="img" class="card-img-top">
+        </div>
+      </div>
+      <div class="col-5 ms-5 mb-0 pb-0">
+        {{#with item}}
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                {{#each head}}
+                  <th>{{this}}</th>
+                {{/each}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#with body}}
+                <tr>
+                  {{#each [0]}}
+                    <td>{{this}}</td>
+                  {{/each}}
+                </tr>
+                <tr>
+                  {{#each [1]}}
+                    <td>{{this}}</td>
+                  {{/each}}
+                </tr>
+                <tr>
+                  {{#each [2]}}
+                    <td>{{this}}</td>
+                  {{/each}}
+                </tr>
+              {{/with}}
+            </tbody>
+          </table>
+        {{/with}}
+      </div>
+      <div class="row">
+        <div class="col-6 pe-0">
+          <div class="card mt-4 py-4">
+            {{#with info}}
+              <div class="card-body">
+                <div class="card-title fs-3">{{title}}</div>
+                <p class="card-text">{{about}}</p>
+                <h4>
+                  {{price}}
+                </h4>
+                {{#each category}}
+                  {{#if isHot}}
+                    <span class="badge text-bg-warning text-uppercase rounded-pill">hot!</span>
+                  {{/if}}
+                  {{#if isNew}}
+                    <span class="badge text-bg-primary text-capitalize rounded-pill">new</span>
+                  {{/if}}
+                  {{#if isBonus}}
+                    <span class="badge text-bg-info text-capitalize rounded-pill">bonus</span>
+                  {{/if}}
+                {{/each}}
+              </div>
+            {{/with}}
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-5 px-2 ps-0 pe-1 my-0">
+          {{#with param}}
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">{{title}}</div>
+              </div>
+              <ol class="list-group">
+                {{#each list}}
+                  <li class="list-group-item">{{this}}</li>
+                {{/each}}
+              </ol>
+            </div>
+          {{/with}}
+          {{#with alert}}
+            <div class="alert alert-danger mt-3">
+              {{#if isError}}
+                <p class="px-0 py-0 m-0">{{text}}</p>
+              {{/if}}
+            </div>
+          {{/with}}
+        </div>
+      </div>
+
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 pe-4">
+        <div class="card">
+          <div class="card-body">
+            {{#each actionList}}
+              {{#if isWarning}}
+                <button class="btn btn-warning me-2">{{name}}</button>
+              {{/if}}
+              {{#if isError}}
+                <button class="btn btn-outline-danger me-2">{{name}}</button>
+              {{/if}}
+              {{#if isSuccess}}
+                <button class="btn btn-success me-2">{{name}}</button>
+              {{/if}}
+              {{#if isGood}}
+                <button class="btn btn-outline-success">{{name}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/with}}
+</section>
+
+<hr>
+<section>
+  {{#with goodsOtherBlock}}
+    <h3 class="text-center">{{title}}</h3>
+    {{>shopcard}}
+  {{/with}}
+</section>
+
+<hr>
+{{> shopaction}}
+
+<hr>
+{{> shopfooter}}

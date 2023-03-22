@@ -1,0 +1,29 @@
+<div class='row g-2 mt-3'>
+  {{#each cards}}
+    <div class='col-4'>
+      <div class='card h-100'>
+        <img
+          src='{{image}}'
+          alt='img'
+          class='card-img-top'
+        />
+        <div class='card-body'>
+          <div class='card-title text-bold'>
+            {{title}}
+            {{#if isHot}}
+              <span
+                class='badge text-bg-warning text-uppercase rounded-pill'
+              >hot!</span>
+            {{/if}}
+            {{#if idNew}}
+              <span
+                class='badge text-bg-primary text-capitalize rounded-pill'
+              >new</span>
+            {{/if}}
+          </div>
+          <p class='card-text'>{{description}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

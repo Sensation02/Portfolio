@@ -1,0 +1,124 @@
+{{>shopheader}}
+
+<section>
+  <div class='row'>
+    <div class='col-12 ms-3'>
+      {{#with header}}
+        <div class='row'>
+          <div class='col-9'>
+            <h1>{{title}}</h1>
+          </div>
+          <div class='col-3 mt-2'>
+            <a
+              href='{{button.link}}'
+              class='btn btn-outline-secondary'
+            >{{button.text}}</a>
+          </div>
+        </div>
+      {{/with}}
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section>
+  <div class='row'>
+    <div class='col-12'>
+      {{#each goodsBlock}}
+        <div class='card mb-3'>
+          <div class='card-body'>
+            <div class='row'>
+              <div class='col-2'>
+                <img
+                  src='{{image}}'
+                  alt=''
+                  class='card-img-top'
+                />
+              </div>
+              <div class='col-4'>
+                <h4 class='card-title'>{{name}}</h4>
+                <p class='card-text'>{{description}}</p>
+              </div>
+              <div class='col-2 mt-5 ps-5'>
+                <h6 class='card-text'>{{price.title}}</h6>
+                <strong
+                  class='card-text'
+                >{{price.value}}</strong>
+              </div>
+              <div class='col-2 mt-5 ps-5'>
+                <p class='card-text'>{{amount}}</p>
+              </div>
+              <div class='col-2'>
+                {{#each buttons}}
+                  {{#if isPrimary}}
+                    <button class='btn btn-primary my-3'>
+                      {{text}}
+                    </button>
+                  {{/if}}
+                  {{#if isDanger}}
+                    <button
+                      class='btn btn-outline-danger my-3'
+                    >
+                      {{text}}
+                    </button>
+                  {{/if}}
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section>
+  <div class='row'>
+    <div class='col-12 ms-5'>
+      {{#with total}}
+        <div class='row'>
+          <div class='col-8'>
+            <h3>{{title}}</h3>
+            <h2>{{amount}}</h2>
+            <p>{{delivery}}</p>
+          </div>
+          <div class='col-4'>
+            {{#each buttons}}
+              {{#if isSuccess}}
+                <a
+                  href='{{link}}'
+                  class='btn btn-success mb-2'
+                >{{text}}</a>
+              {{/if}}
+              {{#if isOutline}}
+                <a
+                  href='{{link}}'
+                  class='btn btn-outline-success mb-2'
+                >{{text}}</a>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      {{/with}}
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section>
+  {{#with goodsOtherBlock}}
+    {{>shopcard}}
+  {{/with}}
+</section>
+
+<hr>
+
+{{>shopsubscribe}}
+
+<hr>
+
+{{>shopfooter}}

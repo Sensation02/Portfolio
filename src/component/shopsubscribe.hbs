@@ -1,0 +1,26 @@
+<section>
+  {{#with subscribe}}
+    <div class='row'>
+      <div class='col-12 pb-0'>
+        <div class='card text-bg-dark'>
+          <div class='row'>
+            <div class='col-8 my-3'>
+              <div class='card-body'>
+                <h2 class='card-title'>{{header}}</h2>
+                <p class='card-text'>{{description}}</p>
+              </div>
+            </div>
+            <div class='col-4 p-4 mt-3'>
+              {{#each buttons}}
+                <a
+                  href='{{link}}'
+                  class='btn btn-primary mb-3'
+                >{{text}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/with}}
+</section>

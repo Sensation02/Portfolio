@@ -1,16 +1,14 @@
 <footer>
   <div class='row'>
     {{#each footer}}
-      <div class='col m-3 p-2 d-flex align-self-stretch'>
-        <ul class='nav'>
+      <div class='col'>
+        <div class="card border-light h-100 d-flex flex-column justify-content-between">
           {{#each this}}
-              <li class='nav-item '>
-                <a
-                  href='{{this.link}}'
-                  class='nav-link {{#if @last}}disabled{{/if}}'>{{this.text}}</a>
-              </li>
+            <a
+              href='{{this.link}}'
+              class='text-decoration-none m-2 {{#if @last}}nav-link disabled{{/if}}'>{{this.text}}</a>
           {{/each}}
-        </ul>
+        </div>
       </div>
     {{/each}}
   </div>

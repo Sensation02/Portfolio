@@ -1,22 +1,118 @@
 <div>
-  {{>link text=name href=url noLine=true}} <br>
-  <div>
+  {{>link text=name href=url}}
+  <div class="my-2">
     <p>{{about}}</p>
   </div>
-  <div><em>“Project stacks”</em> {{stackAmount}}</div> <br>
-  {{#each stack}}
-    <ul>
-      <li>
-        {{name}}
+  <div class="mb-2">
+    <em><q>Project stacks</q></em> {{stackAmount}}
+  </div>
+  <div class="mb-3">
+    {{#each stack}}
+      <ul class="list-group">
+        <li class="list-group-item my-1">
+          {{name}}
+        </li>
+      </ul>
+    {{/each}}
+  </div>
+  <div class="mb-2">
+    <em><q>Project awards</q></em> {{awardAmount}}
+  </div>
+  <div class="mb-3">
+    {{#each awards}}
+      <ul class="list-group">
+        <li class="list-group-item my-1">
+          {{name}}
+        </li>
+      </ul>
+    {{/each}}
+  </div>
+  <div class="mb-2">
+    <em><q>Other work in project</q></em>
+  </div>
+  <div class="mb-3">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop home</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shophome" class="btn btn-outline-success text-capitalize" target="_blank">Home</a>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop catalog</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopcatalog" class="btn btn-outline-success text-capitalize" target="_blank">catalog</a>
+          </div>
+        </div>
+      </li>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop news</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopnews" class="btn btn-outline-success text-capitalize" target="_blank">news</a>
+          </div>
+        </div>
+      </li>
+            <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop profile</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopprofile" class="btn btn-outline-success text-capitalize" target="_blank">profile</a>
+          </div>
+        </div>
+      </li>
+            <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop order</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shoporder" class="btn btn-outline-success text-capitalize" target="_blank">shop order</a>
+          </div>
+        </div>
+      </li>
+            <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop product</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopproduct" class="btn btn-outline-success text-capitalize" target="_blank">product</a>
+          </div>
+        </div>
+      </li>
+            <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop cart</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopcart" class="btn btn-outline-success text-capitalize" target="_blank">cart</a>
+          </div>
+        </div>
+      </li>
+            <li class="list-group-item">
+        <div class="row">
+          <div class="col-8 my-2">
+            <h6 class="text-capitalize">shop review</h6>
+          </div>
+          <div class="col-4 text-end">
+            <a href="/shopreview" class="btn btn-outline-success text-capitalize" target="_blank">review</a>
+          </div>
+        </div>
       </li>
     </ul>
-  {{/each}} <br>
-  <div><em>“Project awards”</em> {{awardAmount}}</div> <br>
-  {{#each awards}}
-    <ul>
-      <li>
-        {{name}}
-      </li>
-    </ul>
-  {{/each}}
+  </div>
 </div>

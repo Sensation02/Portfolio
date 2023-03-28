@@ -1,36 +1,38 @@
-<div>{{position}}</div>
-<br>
-
-<div>
-  {{duration.from}} -
-  {{#if duration.to}}
-    {{duration.to}}
-  {{else}}
-    Current
-  {{/if}}
-
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-8">
+        <h4 class="card-title">{{position}}</h4>
+      </div>
+      <div class="col-4 ">
+        <div class="card-text text-end">
+          {{duration.from}} -
+          {{#if duration.to}}
+            {{duration.to}}
+          {{else}}
+            Current
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title mb-2">
+      {{#if company.url}}
+        {{> link text=company.name href=company.url}}
+      {{else}}
+        <b>{{company.name}}</b>
+      {{/if}}
+    </h5>
+    <h6 class="mb-3">
+      <strong>Projects: {{projectAmount}}</strong>
+    </h6>
+    <ul class="list-group">
+      {{#each projects}}
+        <li class="list-group-item">
+          {{> projects}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
-<br>
-
-<div>
-  {{#if company.url}}
-    {{> link text=company.name href=company.url blank=true noLine=true}}
-  {{else}}
-    <b>{{company.name}}</b>
-  {{/if}}
-</div>
-<br>
-
-<div><strong>Projects: {{projectAmount}} </strong></div>
-<br>
-
-
-<ul>
-  {{#each projects}}
-    <li>
-      {{> projects}}
-    </li>
-  {{/each}}
-</ul>
-
-<br>

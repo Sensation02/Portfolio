@@ -27,9 +27,12 @@ let footer = {
     },
   },
 }
+
 // ================================================================
 router.get('/', function (req, res) {
-  res.render('index', {})
+  res.render('', {
+    layout: 'index',
+  })
 })
 // ================================================================
 router.get('/summary', function (req, res) {
@@ -424,7 +427,6 @@ router.get('/bio', function (req, res) {
 })
 
 router.get('/program', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'basic',
     page: {
@@ -511,7 +513,6 @@ router.get('/program', function (req, res) {
 })
 
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'basic',
     page: {
@@ -1452,18 +1453,38 @@ router.get('/shophome', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     newsBlock: {
@@ -1738,18 +1759,38 @@ router.get('/shopproduct', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     breadcrumb: [
@@ -1951,18 +1992,38 @@ router.get('/shopnews', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     breadcrumb: [
@@ -2158,22 +2219,38 @@ router.get('/shoporder', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
         },
         {
-          text: 'Exit',
-          href: null,
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     header: 'Оформлення замовлення',
@@ -2523,18 +2600,38 @@ router.get('/shopcart', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     header: {
@@ -2765,18 +2862,38 @@ router.get('/shopprofile', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
 
     header: 'Мої замовлення',
@@ -3059,18 +3176,38 @@ router.get('/shopreview', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
     formBlock: {
       header: 'Відгуки покупців про Ноут',
@@ -3340,18 +3477,38 @@ router.get('/shopcatalog', function (req, res) {
       links: [
         {
           text: 'Home',
-          href: 'https://github.com/',
+          href: 'shophome',
         },
         {
-          text: 'Contacts',
-          href: 'https://www.google.com/',
+          text: 'Catalog',
+          href: 'shopcatalog',
         },
         {
-          text: 'Help',
-          href: 'https://www.youtube.com/',
+          text: 'News',
+          href: 'shopnews',
+        },
+        {
+          text: 'Profile',
+          href: 'shopprofile',
+        },
+        {
+          text: 'Shop Order',
+          href: 'shoporder',
+        },
+        {
+          text: 'Product',
+          href: 'shopproduct',
+        },
+        {
+          text: 'Cart',
+          href: 'shopcart',
+        },
+        {
+          text: 'Review',
+          href: 'shopreview',
         },
       ],
-      Logo: 'Logo',
+      Logo: 'Shop',
     },
     breadcrumb: [
       { name: 'Головна', url: 'https://github.com/' },

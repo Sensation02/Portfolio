@@ -1,5 +1,12 @@
+/* кореневий селектор, має дуже високий пріоритет, коли треба задавати глобальні стилі. Також задає певні змінні які в ньому є: */
+:root {
+  background: #1a7bab;
+}
+
+/* Селектор тегу, відповідає за стиль вказаного селектора: */
 html {
   max-width: 1000px;
+  background: #2918c676;
 }
 
 body {
@@ -17,4 +24,66 @@ nav {
 
 section {
   padding: 16px;
+}
+
+/* глобальний селектор (універсальний | для всіх тегів, має найвищий пріоритет, але бутстреп має вищий пріоритет): */
+* {
+}
+/* Селектор класу: ."назва класу" */
+.text-center {
+  font-weight: bold;
+  color: rgb(60, 32, 32);
+  background-color: #754c4c;
+}
+/* Селектор ідентифікатора: #"назва ідентифікатора" */
+#list {
+  color: blue;
+}
+/* декілька селекторів пишуться через , пріоритет тут вищий ніж в селектора написаного вище*/
+#list,
+#list_item {
+  margin-left: 30px;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#215cc9, #1bb4b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Вибираємо тег з конкретним ідентифікатором і чим точніше ми вказуємо тим вищий пріоритет (до певної межі) */
+li#list_item_2 {
+  margin-left: 30px;
+  font-size: 70px;
+  background: -webkit-linear-gradient(#7f754b, #07e834);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Дочірній селектор пишеться через > (parent > children) , тут можна писати і класи і ідентифікатори тощо */
+div > p {
+  background-color: #d3b21e;
+}
+div > p > span#text-2 {
+  color: white;
+}
+/* Селектор нащадка надає стиль для всіх нащадків (parent >> children >> children) */
+div #btn_span {
+  background-color: #ffffff;
+  color: #215cc9;
+}
+/* Сестринський селектор (тобто до тегу "p" який стоїть за тегом "h2")*/
+h2 + p {
+  background-color: #000000;
+  color: #1a7bab;
+}
+h2 + p,
+p + em {
+  background-color: #000000;
+  color: #1a7bab;
+}
+/* Сусідський селектор, тобто всі наступні селектори після вказаного */
+h2 ~ #section_text {
+  font-size: 30px;
+}
+
+h2 ~ em > span {
+  font-size: 40px;
+  color: #215cc9;
 }

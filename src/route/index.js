@@ -35,6 +35,16 @@ router.get('/', function (req, res) {
   })
 })
 // ================================================================
+
+router.get('/css_lesson', function (req, res) {
+  res.render('css_lesson', {
+    layout: 'css_lesson',
+    page: {
+      title: 'css_lesson',
+    },
+  })
+})
+
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {

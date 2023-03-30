@@ -1,4 +1,4 @@
-/* кореневий селектор, має дуже високий пріоритет, коли треба задавати глобальні стилі. Також задає певні змінні які в ньому є: */
+/* кореневий селектор, має дуже високий пріоритет, коли треба задавати глобальні стилі. Також задає певні змінні які в ньому є:
 :root {
   background: #1a7bab;
 }
@@ -86,4 +86,47 @@ h2 ~ #section_text {
 h2 ~ em > span {
   font-size: 40px;
   color: #215cc9;
+}
+*/
+/* Селектор першої дитини - вибирає тег який є першою дитиною всередині батьківського тегу */
+.card-dark {
+  background: #c2c2c2;
+}
+.item {
+  color: #1b965c;
+}
+.item:first-child {
+  color: #215cc9;
+}
+/* :first-child - селектор псевдокласу */
+/* селектор останньої дитини */
+.item:last-child {
+  color: #973232;
+}
+/* селектор одиничної дитини - діє тільки тоді коли є одна дитина, він є ОДИН */
+.item:only-child {
+  color: #1bb4b4;
+}
+/* селектор першого типу */
+div.card-dark > p:first-of-type {
+  background-color: #fff;
+  font-weight: bolder;
+}
+/* селектор останнього типу */
+div.card-dark > p:last-of-type {
+  background-color: #d5d5d5;
+  font-weight: 200;
+}
+/* селектор одиничного типу */
+div.card-dark > s:only-of-type {
+  background-color: #848484;
+  color: #ffffff76;
+  font-weight: 600;
+}
+/* селектор порядкової дитини (n => 1,2,3..., odd, even, 3n + 1) */
+li:nth-child(3) {
+  color: #973232;
+}
+li:nth-child(2) {
+  color: #e04949;
 }

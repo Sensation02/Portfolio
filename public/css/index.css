@@ -27,20 +27,20 @@ section {
 }
 
 /* глобальний селектор (універсальний | для всіх тегів, має найвищий пріоритет, але бутстреп має вищий пріоритет): */
-* {
+/* * {
 }
 /* Селектор класу: ."назва класу" */
-.text-center {
+/* .text-center {
   font-weight: bold;
   color: rgb(60, 32, 32);
   background-color: #754c4c;
-}
-/* Селектор ідентифікатора: #"назва ідентифікатора" */
+} */
+/* Селектор ідентифікатора: #"назва ідентифікатора"
 #list {
   color: blue;
-}
+} */
 /* декілька селекторів пишуться через , пріоритет тут вищий ніж в селектора написаного вище*/
-#list,
+/* #list,
 #list_item {
   margin-left: 30px;
   font-size: 72px;
@@ -49,27 +49,27 @@ section {
   -webkit-text-fill-color: transparent;
 }
 /* Вибираємо тег з конкретним ідентифікатором і чим точніше ми вказуємо тим вищий пріоритет (до певної межі) */
-li#list_item_2 {
+/* li#list_item_2 {
   margin-left: 30px;
   font-size: 70px;
   background: -webkit-linear-gradient(#7f754b, #07e834);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 /* Дочірній селектор пишеться через > (parent > children) , тут можна писати і класи і ідентифікатори тощо */
-div > p {
+/* div > p {
   background-color: #d3b21e;
 }
 div > p > span#text-2 {
   color: white;
-}
+} */
 /* Селектор нащадка надає стиль для всіх нащадків (parent >> children >> children) */
-div #btn_span {
+/* div #btn_span {
   background-color: #ffffff;
   color: #215cc9;
-}
+} */
 /* Сестринський селектор (тобто до тегу "p" який стоїть за тегом "h2")*/
-h2 + p {
+/* h2 + p {
   background-color: #000000;
   color: #1a7bab;
 }
@@ -77,9 +77,9 @@ h2 + p,
 p + em {
   background-color: #000000;
   color: #1a7bab;
-}
+} */
 /* Сусідський селектор, тобто всі наступні селектори після вказаного */
-h2 ~ #section_text {
+/* h2 ~ #section_text {
   font-size: 30px;
 }
 
@@ -129,4 +129,72 @@ li:nth-child(3) {
 }
 li:nth-child(2) {
   color: #e04949;
+}
+*/
+/* селектор атрибутів */
+.input-dark {
+  background: #c2c2c2;
+}
+.input-dark[required] {
+  background: #973232;
+}
+
+/* селектор значення атрибута */
+.input-dark[type='number'] {
+  background: #1b965c;
+}
+/* Селектор наявності значення атрибута */
+.small-img[alt~='100px'] {
+  height: 200px;
+}
+.small-img[alt~='200px'] {
+  height: 300px;
+}
+.card[class~='img'] {
+  height: 800px;
+}
+/* Селектор префіксу значення атрибуту */
+button[class|='btn'] {
+  background-color: #1a7bab;
+}
+/* селектор початку значення атрибуту */
+a[class^='secondary'] {
+  background-color: #973232;
+  color: #754c4c;
+}
+/* селектор кореня атрибуту */
+button[class*='warning'] {
+  background-color: #94cf16;
+  color: #07e834;
+}
+/* селектор кінцівки значення атрибута */
+button[class$='success'] {
+  background-color: #1a7bab;
+  color: #215cc9;
+}
+/* селектор псевдоелементів */
+.card-red > .btn-danger::first-letter {
+  font-size: 30px;
+  color: #4c1919;
+}
+.card-red > .btn-info::first-line {
+  font-size: 30px;
+  color: #00e1ff;
+  background-color: #4397ff;
+}
+.card > p::first-line {
+  color: #777501;
+}
+.card-red > input::placeholder {
+  color: #de0505;
+}
+/* псевдоелемент "попереду" */
+.card-red > #quote::before {
+  color: blueviolet;
+  content: '~~~~EURO~~~~ ';
+}
+/* "позаду" */
+.card-red > #quote::after {
+  color: red;
+  content: '$$$DOLLAR$$$ ';
 }

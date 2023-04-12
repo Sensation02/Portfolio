@@ -1,0 +1,275 @@
+/* глобальний селектор (універсальний | для всіх тегів, має найвищий пріоритет, але бутстреп має вищий пріоритет):
+/* * {
+}
+/* Селектор класу: ."назва класу" */
+/* .text-center {
+  font-weight: bold;
+  color: rgb(60, 32, 32);
+  background-color: #754c4c;
+} */
+/* Селектор ідентифікатора: #"назва ідентифікатора"
+#list {
+  color: blue;
+} */
+/* декілька селекторів пишуться через , пріоритет тут вищий ніж в селектора написаного вище*/
+/* #list,
+#list_item {
+  margin-left: 30px;
+  font-size: 72px;
+  background: -webkit-linear-gradient(#215cc9, #1bb4b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Вибираємо тег з конкретним ідентифікатором і чим точніше ми вказуємо тим вищий пріоритет (до певної межі) */
+/* li#list_item_2 {
+  margin-left: 30px;
+  font-size: 70px;
+  background: -webkit-linear-gradient(#7f754b, #07e834);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+/* Дочірній селектор пишеться через > (parent > children) , тут можна писати і класи і ідентифікатори тощо */
+/* div > p {
+  background-color: #d3b21e;
+}
+div > p > span#text-2 {
+  color: white;
+} */
+/* Селектор нащадка надає стиль для всіх нащадків (parent >> children >> children) */
+/* div #btn_span {
+  background-color: #ffffff;
+  color: #215cc9;
+} */
+/* Сестринський селектор (тобто до тегу "p" який стоїть за тегом "h2")*/
+/* h2 + p {
+  background-color: #000000;
+  color: #1a7bab;
+}
+h2 + p,
+p + em {
+  background-color: #000000;
+  color: #1a7bab;
+} */
+/* Сусідський селектор, тобто всі наступні селектори після вказаного */
+/* h2 ~ #section_text {
+  font-size: 30px;
+}
+
+h2 ~ em > span {
+  font-size: 40px;
+  color: #215cc9;
+}
+*/
+/* Селектор першої дитини - вибирає тег який є першою дитиною всередині батьківського тегу */
+/* .card-dark {
+  background: #c2c2c2;
+} */
+/* .item {
+  color: #1b965c;
+}
+.item:first-child {
+  color: #215cc9;
+} */
+/* :first-child - селектор псевдокласу */
+/* селектор останньої дитини */
+/* .item:last-child {
+  color: #973232;
+} */
+/* селектор одиничної дитини - діє тільки тоді коли є одна дитина, він є ОДИН */
+/* .item:only-child {
+  color: #1bb4b4;
+} */
+/* селектор першого типу */
+/* div.card-dark > p:first-of-type {
+  background-color: #fff;
+  font-weight: bolder;
+} */
+/* селектор останнього типу */
+/* div.card-dark > p:last-of-type {
+  background-color: #d5d5d5;
+  font-weight: 200;
+} */
+/* селектор одиничного типу */
+/* div.card-dark > s:only-of-type {
+  background-color: #848484;
+  color: #ffffff76;
+  font-weight: 600;
+} */
+/* селектор порядкової дитини (n => 1,2,3..., odd, even, 3n + 1) */
+/* li:nth-child(3) {
+  color: #973232;
+}
+li:nth-child(2) {
+  color: #e04949;
+}
+*/
+/* селектор атрибутів */
+/* .input-dark {
+  background: #c2c2c2;
+}
+.input-dark[required] {
+  background: #973232;
+} */
+
+/* селектор значення атрибута
+.input-dark[type='number'] {
+  background: #1b965c;
+} */
+/* Селектор наявності значення атрибута */
+/* .small-img[alt~='100px'] {
+  height: 200px;
+}
+.small-img[alt~='200px'] {
+  height: 300px;
+}
+.card[class~='img'] {
+  height: 800px;
+} */
+/* Селектор префіксу значення атрибуту */
+/* button[class|='btn'] {
+  background-color: #1a7bab;
+} */
+/* селектор початку значення атрибуту */
+/* a[class^='secondary'] {
+  background-color: #973232;
+  color: #754c4c;
+} */
+/* селектор кореня атрибуту */
+/* button[class*='warning'] {
+  background-color: #94cf16;
+  color: #07e834;
+} */
+/* селектор кінцівки значення атрибута */
+/* button[class$='success'] {
+  background-color: #1a7bab;
+  color: #215cc9;
+} */
+/* селектор псевдоелементів */
+/* .card-red > .btn-danger::first-letter {
+  font-size: 30px;
+  color: #4c1919;
+}
+.card-red > .btn-info::first-line {
+  font-size: 30px;
+  color: #00e1ff;
+  background-color: #4397ff;
+}
+.card > p::first-line {
+  color: #777501;
+}
+.card-red > input::placeholder {
+  color: #de0505;
+} */
+/* псевдоелемент "попереду" */
+/* .card-red > #quote::before {
+  color: blueviolet;
+  content: '~~~~EURO~~~~ ';
+} */
+/* "позаду" */
+/* .card-red > #quote::after {
+  color: red;
+  content: '$$$DOLLAR$$$ ';
+} */
+
+/* селектор цільового тегу - вказує на якір, що в свою чергу є посиланням в форматі id. При натисканні на такий якір, браузер буде прокручувати до сторінки з цим тегом*/
+#anchor:target {
+  color: blue;
+}
+/* селектор невідвіданих посилань */
+.link:link {
+  color: aquamarine;
+}
+/* селектор наведення */
+.hover:hover {
+  background-color: rgb(29, 80, 174);
+}
+/* селектор активного тегу */
+.link:active {
+  color: purple;
+}
+/* селектор фокуса */
+.input {
+  background: rgb(194, 194, 194);
+}
+.input:focus {
+  background: rgb(35, 35, 35);
+  color: rgb(255, 255, 255);
+}
+/* Фокус всередині тегу */
+.card:focus-within {
+  background-color: gray;
+}
+/* селектор мови тегу */
+.buton:lang(ua) {
+  background-color: rgb(255, 255, 111);
+  color: rgb(31, 123, 251);
+}
+.buton:lang(en) {
+  background-color: blue;
+  color: red;
+}
+.buton:lang(fr) {
+  background-color: rgb(63, 63, 248);
+  color: white;
+}
+/* селектор увімкненого тегу */
+.enable:enabled {
+  background-color: #72ff75;
+  color: black;
+}
+/* селектор вимкненого тегу */
+.disabled:disabled {
+  background-color: #005024;
+  color: whitesmoke;
+}
+/* селектор редагованого тегу */
+.input_one:read-write {
+  background-color: #0b70ab;
+}
+.input_one::placeholder {
+  background-color: #0b70ab;
+  color: #72ff75;
+}
+.input_two:read-only {
+  background-color: #004871;
+}
+.input_two::placeholder {
+  background-color: #004871;
+  color: #72ff75;
+}
+/* Селектор відміченого тегу */
+input[type='checkbox'] ~ span {
+  background: black;
+  color: #0b70ab;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+input[type='checkbox']:checked ~ span {
+  background: rgb(70, 70, 70);
+  color: #0b70ab;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+/* Селектор валідного тегу */
+.valid:valid {
+  background-color: #005024;
+}
+/* селектор невалідного тегу */
+.valid:invalid {
+  background-color: #004871;
+}
+/* Селектор необов'язкового тегу */
+.valid:optional {
+  background-color: #c6bd18;
+}
+/* межі діапазону */
+.number:invalid {
+  background-color: #fff;
+}
+.number:out-of-range {
+  background-color: #ab1b0b;
+}
+.number:in-range {
+  background-color: #087100;
+}
+/* //////////////////////////////////////////////////// */

@@ -45,6 +45,15 @@ router.get('/css_lesson', function (req, res) {
   })
 })
 
+router.get('/selector', function (req, res) {
+  res.render('selector', {
+    layout: 'selector',
+    page: {
+      title: 'selector',
+    },
+  })
+})
+
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {

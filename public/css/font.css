@@ -1,0 +1,46 @@
+html {
+  max-width: 1000px;
+  background: #2918c676;
+}
+
+body {
+  margin: 32px;
+  background: #fff;
+}
+
+main,
+header,
+footer,
+nav {
+  margin: 32px;
+  padding: 10px;
+}
+
+section {
+  padding: 16px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+
+* {
+  font-family: 'Nunito', monospace;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: 200;
+  font-style: italic;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+span {
+  font-size: small;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: blue;
+}

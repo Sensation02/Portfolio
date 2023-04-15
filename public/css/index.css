@@ -1,5 +1,5 @@
 html {
-  max-width: 1000px;
+  max-width: 2000px;
   background: #2918c676;
 }
 
@@ -22,25 +22,17 @@ section {
 
 /* ///////////////////////////////////////////////////////////////////////// */
 
-* {
-  font-family: 'Nunito', monospace;
-}
-
-h1 {
-  font-size: xx-large;
-  font-weight: 200;
-  font-style: italic;
-}
-
-p {
-  font-size: 18px;
-  font-weight: 600;
-  font-style: normal;
-}
-
-span {
-  font-size: small;
-  text-decoration-line: underline;
-  text-decoration-style: double;
-  text-decoration-color: blue;
+.card {
+  /* display: none; - зникає з потоку документа */
+  /* display: inline-block; - блочно в лінію */
+  /* display: block; - блочно */
+  /* display: inline; - в лінію */
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  min-width: min-content;
+  max-width: 300px;
+  min-height: fit-content;
+  max-height: max-content;
+  box-sizing: content-box;
 }

@@ -21,18 +21,3 @@ section {
 }
 
 /* ///////////////////////////////////////////////////////////////////////// */
-
-.card {
-  /* display: none; - зникає з потоку документа */
-  /* display: inline-block; - блочно в лінію */
-  /* display: block; - блочно */
-  /* display: inline; - в лінію */
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  min-width: min-content;
-  max-width: 300px;
-  min-height: fit-content;
-  max-height: max-content;
-  box-sizing: content-box;
-}

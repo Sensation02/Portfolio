@@ -54,6 +54,15 @@ router.get('/selector', function (req, res) {
   })
 })
 
+router.get('/border', function (req, res) {
+  res.render('border', {
+    layout: 'border',
+    page: {
+      title: 'border',
+    },
+  })
+})
+
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {
@@ -194,9 +203,6 @@ router.get('/work', function (req, res) {
     },
     layout: 'big',
     header,
-    page: {
-      title: 'Resume | Work',
-    },
     main: {
       works: [
         {

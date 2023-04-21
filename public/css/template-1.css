@@ -62,6 +62,7 @@
   font-weight: 500;
   text-align: center;
   margin-bottom: 12px;
+  text-shadow: 0px 0px 10px rgba(0, 42, 255, 0.552);
 }
 .hero_text {
   font-size: 20px;
@@ -73,6 +74,19 @@
 
 .plans_card:not(:last-of-type) {
   margin-right: 24px;
+}
+
+.card {
+  border: 2px double rgba(43, 113, 226, 0.642);
+  border-radius: 1px 20px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 42, 255, 0.552);
+}
+
+.card:hover {
+  /* outline: 5px solid blue;
+  outline-offset: 5px; */
+  box-shadow: 0px 0px 50px 2px rgba(43, 113, 226, 0.642);
+  cursor: pointer;
 }
 
 .card-header {

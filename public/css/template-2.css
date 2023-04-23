@@ -1,0 +1,294 @@
+.page {
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.header {
+  padding: 24px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.logo {
+  font-size: 17px;
+}
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.nav_vertical > .nav_link {
+  display: block;
+}
+
+.nav_vertical > .nav_link:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.nav_inline > .nav_link {
+  display: inline;
+}
+
+.nav_inline > .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.page_block:not(:last-child) {
+  margin-bottom: 80px;
+}
+
+.hero_title {
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-shadow: 0px 0px 8px rgba(237, 236, 236, 0.552);
+}
+
+.hero_text {
+  font-size: 20px;
+  max-width: 585px;
+}
+
+.hero {
+  background-color: #343a40;
+  color: #dee2e6;
+  border-radius: 24px;
+  padding: 80px;
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 248px;
+  background-color: #007bff;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #3195ff;
+  cursor: pointer;
+}
+
+.preview {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.preview_header > span:not(:last-of-type) {
+  margin-right: 12px;
+}
+
+.preview_date {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.preview_category {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.preview > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.preview_title {
+  display: inline-block;
+  color: #343a40;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.preview_text {
+  color: #212529;
+  font-size: 16px;
+}
+
+.preview_link {
+  text-transform: capitalize;
+}
+
+.preview_category_1 {
+  color: #007bff;
+}
+
+.preview_category_2 {
+  color: #ff0000;
+}
+
+.preview_category_3 {
+  color: #198754;
+}
+
+.preview_category_4 {
+  color: #ff7a00;
+}
+
+.list_title {
+  font-weight: 500;
+  font-size: 32px;
+  color: #212529;
+  margin: 0;
+}
+
+.list_header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 40px;
+}
+
+.list_buttons {
+  text-align: right;
+}
+
+.list_body {
+}
+
+.news {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.news:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.news > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.news_title {
+  display: block;
+  font-weight: 500;
+  font-size: 27px;
+  color: #212529;
+}
+.news_info {
+  color: #6c757d;
+}
+.news_author {
+  color: #007bff;
+  margin-left: 8px;
+}
+.news_text {
+  color: #212529;
+}
+.news_link {
+  text-transform: capitalize;
+}
+
+.list_aside {
+  margin-left: 40px;
+}
+
+.about {
+  background-color: #f8f9fa;
+  padding: 24px;
+}
+
+.about_title {
+  color: #212529;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.about_text {
+  color: #212529;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 170%;
+}
+
+.link_list {
+  padding: 24px;
+}
+.link_list > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.link_title {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  color: #212529;
+}
+
+.link_item {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+}
+
+.link_item:hover {
+  text-decoration: underline;
+}
+
+.list_aside:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.category_button {
+  font-size: 16px;
+  color: #6c757d;
+
+  padding: 10px 16px;
+
+  border: 1px solid #6c757d;
+  border-radius: 40px;
+
+  line-height: 100%;
+}
+
+.category_button:hover {
+  background-color: #6c757d1b;
+}
+
+.footer {
+  border-top: 2px solid #dee2e6;
+  padding: 24px 0;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #6c757d;
+  display: block;
+  margin-top: 12px;
+}
+
+.footer_title {
+  font-size: 20px;
+  color: #212529;
+  display: block;
+  margin-bottom: 12px;
+}

@@ -45,6 +45,15 @@ router.get('/css_lesson', function (req, res) {
   })
 })
 
+router.get('/background', function (req, res) {
+  res.render('background', {
+    layout: 'background',
+    page: {
+      title: 'background',
+    },
+  })
+})
+
 router.get('/selector', function (req, res) {
   res.render('selector', {
     layout: 'selector',

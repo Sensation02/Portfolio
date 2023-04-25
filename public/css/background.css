@@ -1,0 +1,46 @@
+body {
+  background-image: url('../public/images/wallhaven-weq8y7.png');
+  background-size: 500px 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+
+.body {
+  background-color: #e1e1e1;
+}
+
+.card {
+  background-color: #7373735b;
+  /* little transparent :) */
+  /* background-image: url('/public/images/10-2500x1667.jpg'); */
+  /* background: rgb(0, 111, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 111, 255, 0.4) 0%,
+    rgba(0, 47, 122, 0.4) 100%
+  ); */
+  border-image-repeat: stretch;
+  border-image-slice: 8% 8%;
+  border-image-width: 2% 2%;
+  border-image-outset: 2px;
+  border-image-source: linear-gradient(
+    10deg,
+    #0ab962 30%,
+    #0482d0 70%
+  );
+}
+
+/* .gradient_1 {
+
+  width: 200px;
+  height: 200px;
+  background: rgb(63, 94, 251);
+  background-image: radial-gradient(
+    circle,
+    50% 50% closest-corner at 50% 50%,
+    rgba(63, 94, 251, 0.3) 10%,
+    rgba(252, 70, 107, 0) 90%
+  );
+} */

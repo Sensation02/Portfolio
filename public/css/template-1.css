@@ -1,6 +1,13 @@
+:root {
+  --blue-button: #006eff;
+  --dark-text: #000000d9;
+}
+
 .page {
   background-color: #fff;
   padding: 0 15px;
+  background-image: url('../public/images/wallhaven-weq8y7.png');
+  background-attachment: scroll;
 }
 
 .page_content {
@@ -27,7 +34,7 @@
 }
 
 .nav_link:hover {
-  color: blue;
+  color: var(--blue-button);
   text-decoration: underline;
 }
 
@@ -62,7 +69,7 @@
   font-weight: 500;
   text-align: center;
   margin-bottom: 12px;
-  text-shadow: 0px 0px 10px rgba(0, 42, 255, 0.552);
+  text-shadow: 0px 0px 10px var(--blue-button);
 }
 .hero_text {
   font-size: 20px;
@@ -77,15 +84,15 @@
 }
 
 .card {
-  border: 2px double rgba(43, 113, 226, 0.642);
+  border: 2px double var(--blue-button);
   border-radius: 1px 20px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 42, 255, 0.552);
+  box-shadow: 0px 0px 10px 2px var(--blue-button);
 }
 
 .card:hover {
   /* outline: 5px solid blue;
   outline-offset: 5px; */
-  box-shadow: 0px 0px 50px 2px rgba(43, 113, 226, 0.642);
+  box-shadow: 0px 0px 50px 2px #2b71e2a4;
   cursor: pointer;
 }
 
@@ -103,6 +110,7 @@
 .card_block {
   text-align: center;
 }
+
 .card_block:not(:last-of-type) {
   margin-bottom: 24px;
 }
@@ -124,7 +132,9 @@
 .card_description_text {
   font-size: 16px;
   color: #212529;
-  display: block;
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: upper-roman;
 }
 
 .card_description_text:not(:last-of-type) {
@@ -155,4 +165,49 @@
   color: #212529;
   display: block;
   margin-bottom: 12px;
+}
+
+.caption {
+  caption-side: top;
+  font-size: calc(100% + 5px);
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration-line: underline;
+  text-decoration-color: #6c757d;
+}
+
+.table {
+  table-layout: auto;
+  /* auto / fixed */
+  width: 400px;
+
+  border-collapse: unset;
+  border-spacing: 5px 10px;
+
+  margin-left: calc(50% - (600px / 2));
+}
+
+.table_row {
+  empty-cells: show;
+  /* hide */
+}
+
+.table_item {
+  border: 1px solid #6c757d;
+
+  font-size: calc(50% + 15px);
+}
+
+.table_item:hover {
+  opacity: 50%;
+  background-color: var(--blue-button);
+  color: var(--dark-text);
+}
+
+.nav_link::before {
+  content: open-quote;
+}
+
+.nav_link::after {
+  content: close-quote;
 }

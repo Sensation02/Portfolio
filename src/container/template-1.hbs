@@ -29,6 +29,22 @@
     </section>
 
     <section class="page_block">
+      <table class="table">
+        <caption class="caption">my random table</caption>
+        <tbody class="table_body">
+          {{#each footer}}
+            <tr class="table_row">
+              {{#each links}}
+                <td class="table_item">{{text}}</td>
+              {{/each}}
+                <td class="table_item"></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page_block">
       <footer class="footer row g-0">
         <div class="col-3">
           {{> logo}}

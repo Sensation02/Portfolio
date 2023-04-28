@@ -1,19 +1,19 @@
 <div class='page'>
   <div class='page_content'>
     <section class="page_block">
-      <header class='header row g-0'>
-        <div class="col-3">
+      <header class='header'>
+        <div class="">
           {{> logo}}
         </div>
-
-        <nav class='header_nav col-9'>
+        {{!-- //////////////////////////////////////////////////////////////////////// --}}
+        <nav class='header_nav'>
           <div class="header_nav_right">
             {{> nav-1 list=header isVertical=false}}
           </div>
         </nav>
       </header>
     </section>
-
+    {{!-- //////////////////////////////////////////////////////////////////////// --}}
     <section class="page_block">
       <div class="hero">
         {{#with hero}}
@@ -22,34 +22,30 @@
         {{/with}}
       </div>
     </section>
-
+    {{!-- //////////////////////////////////////////////////////////////////////// --}}
     <section class="page_block">
-      <div class="row g-4">
+      <div class="flex_container">
         {{#each preview}}
-          <div class="col-6">
+          <div class="flex_item">
             {{> previewCard data=this}}
           </div>
         {{/each}}
       </div>
     </section>
-
+    {{!-- //////////////////////////////////////////////////////////////////////// --}}
     <main class="page_block">
       <div class="row g-0">
         <div class="col-12">
           <div class="list_header">
-            <div class="row g-0">
-              <div class="col-6">
-                <h2 class="list_title">List of posts</h2>
-              </div>
-              <div class="col-6 list_buttons">
-                {{#each categories}}
-                  <button class="category_button">{{text}}</button>
-                {{/each}}
-              </div>
+            <h2 class="list_title">List of posts</h2>
+            <div class="col-6 list_buttons">
+              {{#each categories}}
+                <button class="category_button">{{text}}</button>
+              {{/each}}
             </div>
           </div>
         </div>
-
+        {{!-- //////////////////////////////////////////////////////////////////////// --}}
         <div class="col-7">
           <div class="list_body">
             {{#each news}}
@@ -57,30 +53,29 @@
             {{/each}}
           </div>
         </div>
-
+        {{!-- //////////////////////////////////////////////////////////////////////// --}}
         <div class="col-5">
           <aside class="list_aside">
             <div class="about">
               <h4 class="about_title">About</h4>
               <p class="about_text">{{about}}</p>
             </div>
-              {{>linkList data=archive title='Archive'}}
+            {{>linkList data=archive title='Archive'}}
 
-              {{>linkList data=social title='Social'}}
+            {{>linkList data=social title='Social'}}
           </aside>
         </div>
-
       </div>
     </main>
-
+    {{!-- //////////////////////////////////////////////////////////////////////// --}}
     <section class="page_block">
-      <footer class="footer row g-0">
-        <div class="col-3">
+      <footer class="footer">
+        <div>
           {{> logo}}
           <span class="footer-copyright">Copyright 2023-2024</span>
         </div>
         {{#each footer}}
-          <div class="col-3">
+          <div>
             <span class="footer_title">
               {{title}}
             </span>

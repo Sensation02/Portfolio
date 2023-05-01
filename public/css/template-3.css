@@ -1,0 +1,215 @@
+:root {
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-xxl: 36px;
+  /* ///////////// */
+  --text-size-s: 14px;
+  --text-size-m: 16px;
+  --text-size-l: 20px;
+  /* ///////////// */
+  --border-color: #dee2e6;
+  --title-color: #212529;
+  --text-color: #343a40;
+  --color-primary: #0066ff;
+  /* ///////////// */
+  --font-w-500: 500;
+  --font-w-400: 400;
+  /* ///////////// */
+  --border-radius: 12px;
+  --border-bottom-top: 2px solid var(--border-color);
+}
+
+html {
+  font-family: 'Roboto', mono;
+}
+
+/* //////////////////////////////////////////////////////// */
+.page {
+  background-color: #fff;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+}
+.page_content {
+  max-width: 960px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  padding: var(--space-m);
+  font-size: var(--text-size-m);
+}
+.button:hover {
+  opacity: 0.7;
+}
+/* //////////////////////////////////////////////////////// */
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: var(--border-bottom-top);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 17px;
+  background-color: #0066ff;
+  color: #fff;
+
+  border-radius: calc(var(--space-s) / 2);
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_link {
+  color: var(--text-color);
+  font-size: var(--text-size-m);
+  text-decoration: none;
+  line-height: 100%;
+}
+
+.nav_link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  flex-direction: column;
+  gap: var(--space-xm);
+}
+/* //////////////////////////////////////////////////////// */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+  border-bottom: var(--border-bottom-top);
+}
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+.hero_title {
+  font-size: 50px;
+  color: var(--title-color);
+  font-weight: 500;
+  line-height: 120%;
+}
+.hero_text {
+  color: var(--text-color);
+  font-size: var(--text-size-l);
+  font-weight: var(--font-w-400);
+  line-height: 170%;
+}
+.hero_img {
+  width: 500px;
+  border-radius: var(--border-radius);
+}
+/* //////////////////////////////////////////////////////// */
+.blog {
+  display: flex;
+  gap: var(--space-xxl);
+  padding-bottom: var(--space-l);
+  border-bottom: var(--border-bottom-top);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-l);
+}
+.card_img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+.card_title {
+  font-size: 32px;
+  color: var(--title-color);
+  font-weight: var(--font-w-500);
+}
+.card_text {
+  color: var(--text-color);
+  font-size: var(--text-size-m);
+  font-weight: var(--font-w-400);
+  line-height: 170%;
+}
+.card_button {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+/* //////////////////////////////////////////////////////// */
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #512763;
+  border-radius: var(--border-radius);
+  padding: var(--space-l);
+}
+.form_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+.form_title {
+  font-size: 27px;
+  font-weight: var(--font-w-500);
+  color: #fff;
+}
+.form_info {
+  color: #fff;
+  font-size: var(--text-size-m);
+  font-weight: var(--font-w-400);
+}
+.form_button {
+  color: var(--text-color);
+  background-color: #fff;
+  min-width: 160px;
+  width: 100%;
+  text-align: center;
+}
+/* //////////////////////////////////////////////////////// */
+.footer {
+  border-top: var(--border-bottom-top);
+  padding: var(--space-l) 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copyright {
+  font-size: var(--text-size-s);
+  color: var(--text-color);
+  display: block;
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  font-size: var(--text-size-l);
+  color: var(--title-color);
+  display: block;
+  margin-bottom: var(--space-l);
+}

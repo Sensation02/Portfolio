@@ -1,0 +1,64 @@
+<header class='header'>
+  <div class="">
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class="header_nav_right">
+      {{> nav-1 list=header isVertical=false}}
+    </div>
+  </nav>
+</header>
+
+{{#with main}}
+  <main class="main">
+    <div>
+      <img src="{{image}}" alt="image" class="main_img">
+    </div>
+    <div class="main_content">
+      <h1 class="main_title">{{heading}}</h1>
+      <p class="main-text">{{description}}</p>
+      <div class="main_action">
+        <a href="{{href}}" class="main_button button">{{button}}</a>
+      </div>
+    </div>
+  </main>
+{{/with}}
+
+<section class="features">
+  {{#each featured}}
+    <div class="feat_card">
+      <div >
+        <img src="{{photo}}" alt="image" class="feat_img">
+      </div>
+      <h2 class="feat_title">{{heading}}</h2>
+      <p class="feat_text">{{info}}</p>
+      <div class="feat_action">
+        <a href="{{linkUrl}}" class="action">{{linkText}}</a>
+      </div>
+    </div>
+  {{/each}}
+</section>
+
+<section class="actions">
+{{#each actions}}
+  <div class="action_item">
+    <h3 class="action_title">{{heading}}</h3>
+    <a href="{{url}}" class="action_button button">{{text}}</a>
+  </div>
+{{/each}}
+</section>
+
+<footer class="footer">
+  <div>
+    {{> logo}}
+    <span class="footer-copyright">Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div>
+      <span class="footer_title">
+        {{title}}
+      </span>
+      {{> nav-1 list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>

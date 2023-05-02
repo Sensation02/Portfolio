@@ -16,7 +16,11 @@
       <h1 class="hero_title">{{title}}</h1>
       <p class="hero_text">{{text}}</p>
     </div>
-    <img src="{{photo}}" alt="Hero Image" class="hero_img">
+    <div class="hero_slider">
+      <img src="{{photo}}" alt="Hero Image" class="hero_img">
+      <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+      <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+    </div>
   </section>
 {{/with}}
 

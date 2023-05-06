@@ -38,6 +38,7 @@ html {
 
   display: flex;
   justify-content: center;
+  backdrop-filter: url(/public/images/wallhaven-weq8y7.png);
 }
 .page_content {
   max-width: 960px;

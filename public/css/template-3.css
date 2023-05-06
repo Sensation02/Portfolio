@@ -25,6 +25,15 @@
   scroll-behavior: smooth;
 }
 
+@keyframes button-border {
+  from {
+    color: var(--text-color);
+  }
+  to {
+    color: var(--color-primary);
+  }
+}
+
 html {
   font-family: 'Roboto', mono;
 }
@@ -54,7 +63,7 @@ html {
   font-size: var(--text-size-m);
 }
 .button:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 /* //////////////////////////////////////////////////////// */
 .header {
@@ -94,8 +103,12 @@ html {
 }
 
 .nav_link:hover {
-  color: var(--color-primary);
-  text-decoration: underline;
+  /* color: var(--color-primary);
+  text-decoration: underline; */
+  animation-name: button-border;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 .nav_inline {
@@ -132,11 +145,15 @@ html {
   line-height: 170%;
 }
 .hero_img {
-  /* position: relative; */
-  /* left: 10px; */
   z-index: 2;
   width: 500px;
   border-radius: var(--border-radius);
+  transform: scale(1, 1);
+  transition: transform 1s ease;
+  transition-delay: 0.5s;
+}
+.hero_img:hover {
+  transform: scale(1.1, 1.1);
 }
 .hero_slider_icon {
   background-color: var(--color-primary);
@@ -198,6 +215,12 @@ html {
 .card_button {
   background-color: var(--color-primary);
   color: #fff;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+.card_button:hover {
+  background-color: var(--text-color);
+  color: var(--color-primary);
 }
 /* //////////////////////////////////////////////////////// */
 .form {
@@ -229,6 +252,13 @@ html {
   min-width: 160px;
   width: 100%;
   text-align: center;
+  transition-property: background-color, color, border;
+  transition-duration: 0.5s;
+}
+.form_button:hover {
+  color: #fff;
+  background-color: #512763;
+  border: 1px solid #fff;
 }
 /* //////////////////////////////////////////////////////// */
 .footer {

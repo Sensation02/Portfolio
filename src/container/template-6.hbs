@@ -1,0 +1,81 @@
+<header class='header'>
+  <div class="">
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class="header_nav_right">
+      {{> nav-1 list=header isVertical=false}}
+    </div>
+  </nav>
+</header>
+{{!-- //////////////////////////////////////////////////////////// --}}
+<main class="main">
+  <div class="info">
+    <h1 class="info_title">{{info.title}}</h1>
+    <p class="info_text">{{info.description}}</p>
+  </div>
+  {{#with form}}
+    <div class="form card_box">
+      <form class="form_input_list">
+        {{#each inputs}}
+          <input type="{{type}}" name="{{name}}" class="form_input" placeholder="{{placeholder}}" id="{{id}}" />
+        {{/each}}
+        <div class="form_checkbox">
+          <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+          <div></div>
+          <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+      </form>
+      <a href="#" type="submit" class="form_button">{{button}}</a>
+      <p class="form_subtitle">{{info}}</p>
+    </div>
+  {{/with}}
+</main>
+{{!-- //////////////////////////////////////////////////////////// --}}
+<section class="updates">
+  {{#with updates}}
+    <h2 class="upd_title">{{title}}</h2>
+    {{#each list}}
+      <div class="upd_list_item">
+        <img src="https://picsum.photos/id/1/32/32" alt="img" class="upd_list_img">
+        <div class="upd_list_decr">
+          <strong class="upd_list_name">@{{nickname}}</strong>
+          <p class="upd_list_text">{{description}}</p>
+        </div>
+      </div>
+    {{/each}}
+    <a href="{{show_all.url}}" class="show_all">{{show_all.text}}</a>
+  {{/with}}
+</section>
+{{!-- //////////////////////////////////////////////////////////// --}}
+<section class="experience">
+  {{#with experience}}
+    <div class="exp_header">
+      <h2 class="exp_title">{{title}}</h2>
+    </div>
+    <span class="exp_badge">{{badge}}</span>
+    <div class="exp_list_items">
+      {{#each list}}
+        <div class="list_item">
+          <strong class="list_name">{{name}}</strong>
+          <p class="list_text">{{details}}</p>
+        </div>
+      {{/each}}
+    </div>
+  {{/with}}
+</section>
+{{!-- //////////////////////////////////////////////////////////// --}}
+<footer class="footer">
+  <div>
+    {{> logo}}
+    <span class="footer-copyright">Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div>
+      <span class="footer_title">
+        {{title}}
+      </span>
+      {{> nav-1 list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>

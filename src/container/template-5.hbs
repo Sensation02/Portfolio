@@ -1,0 +1,70 @@
+<header class='header'>
+  <div class="">
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class="header_nav_right">
+      {{> nav-1 list=header isVertical=false}}
+    </div>
+  </nav>
+</header>
+{{!-- //////////////////////////////////////////////////////////// --}}
+
+<main class="main">
+  {{#with messages}}
+    <div class="messages card_box">
+      <h1 class="massages_title">{{title}}</h1>
+      {{#each list}}
+        <div class="msg">
+          <strong class="msg_title">{{name}}</strong>
+          <p class="msg_text">{{message}}</p>
+          <span class="msg_date">{{day}}</span>
+        </div>
+      {{/each}}
+      <a href="#" class="messages_link">All massages</a>
+    </div>
+  {{/with}}
+  {{#with form}}
+    <div class="form card_box">
+      <h2 class="form_title">{{title}}</h2>
+      <form class="form_input_list">
+        {{#each inputs}}
+          <input type="{{type}}" name="{{name}}" class="form_input" placeholder="{{placeholder}}" id="{{id}}" />
+        {{/each}}
+        <div class="form_checkbox">
+          <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+          <div></div>
+          <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+      </form>
+      <a href="#" type="submit" class="form_button">{{button}}</a>
+      <p class="form_subtitle">{{info}}</p>
+    </div>
+  {{/with}}
+</main>
+{{!-- //////////////////////////////////////////////////////////// --}}
+
+{{!-- //////////////////////////////////////////////////////////// --}}
+<section class="advantages">
+  {{#each advantages}}
+    <div class="advantage">
+      <strong class="advantage_title">{{title}}</strong>
+      <p class="advantage_text">{{text}}</p>
+    </div>
+  {{/each}}
+</section>
+{{!-- //////////////////////////////////////////////////////////// --}}
+<footer class="footer">
+  <div>
+    {{> logo}}
+    <span class="footer-copyright">Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div>
+      <span class="footer_title">
+        {{title}}
+      </span>
+      {{> nav-1 list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>

@@ -1,0 +1,285 @@
+:root {
+  font-family: 'Roboto', mono;
+
+  --space-s: 8px;
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-xxl: 36px;
+  /* ///////////// */
+  --text-size-s: 14px;
+  --text-size-m: 16px;
+  --text-size-l: 20px;
+  --text-size-xl: 24px;
+  /* ///////////// */
+  --border-color: #dee2e6;
+  --title-color: #212529;
+  --text-color: #343a40;
+  --bg-color: #563d7c;
+  --color-primary: #0066ff;
+  --color-secondary: #6c757d;
+  /* ///////////// */
+  --font-w-500: 500;
+  --font-w-400: 400;
+  /* ///////////// */
+  --border-radius-12: 12px;
+  --border-radius-4: 4px;
+  --border-bottom-top: 1px solid var(--border-color);
+}
+
+/* //////////////////////////////////////////////////////// */
+.page {
+  background-color: #fff;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+}
+.page_content {
+  max-width: 1000px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 80px;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  padding: var(--space-m);
+  font-size: var(--text-size-m);
+}
+.button:hover {
+  opacity: 0.7;
+}
+.card_box {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
+  padding: var(--space-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+/* //////////////////////////////////////////////////////// */
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: var(--border-bottom-top);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 17px;
+  background-color: #0066ff;
+  color: #fff;
+
+  border-radius: calc(var(--space-s) / 2);
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_link {
+  color: var(--text-color);
+  font-size: var(--text-size-m);
+  text-decoration: none;
+  line-height: 100%;
+}
+
+.nav_link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  flex-direction: column;
+  gap: var(--space-xm);
+}
+/* //////////////////////////////////////////////////////// */
+.main {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+/* //////////////////////////////////////////////////////// */
+.messages {
+  max-width: 620px;
+  width: 100%;
+}
+.massages_title {
+  font-size: var(--text-size-xl);
+  font-weight: var(--font-w-400);
+  color: var(--title-color);
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid var(--border-color);
+}
+.msg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding-bottom: var(--space-m);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-right: var(--space-xxl);
+}
+.msg_title {
+  font-size: var(--text-size-m);
+  font-weight: var(--font-w-500);
+  color: var(--title-color);
+}
+.msg_text {
+  font-size: var(--text-size-m);
+  font-weight: var(--font-w-400);
+  color: var(--text-color);
+}
+.msg_date {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.messages_link {
+  color: var(--color-primary);
+  font-size: var(--text-size-s);
+  align-self: flex-end;
+  transition: opacity 0.7s;
+  transition: border-bottom 0.7s;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.messages_link:hover {
+  opacity: 0.7;
+  border-bottom: 1px solid var(--color-primary);
+}
+/* //////////////////////////////////////////////////////// */
+.form {
+  width: 100%;
+  max-width: 340px;
+  position: relative;
+}
+.form_title {
+  text-align: center;
+  font-size: var(--text-size-xl);
+  font-weight: var(--font-w-400);
+  color: var(--title-color);
+}
+.form_input_list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+.form_input {
+  padding: var(--space-xm);
+  border: var(--border-bottom-top);
+  border-radius: var(--border-radius-4);
+}
+.form_input::placeholder {
+  color: var(--color-secondary);
+  font-size: var(--text-size-m);
+}
+.form_checkbox {
+  display: flex;
+  gap: var(--space-s);
+  align-items: center;
+}
+.form_checkbox > input {
+  display: none;
+}
+.form_checkbox > input ~ div {
+  border: 1px solid #767676;
+  border-radius: var(--border-radius-4);
+  height: 13px;
+  width: 13px;
+}
+.form_checkbox > input:checked ~ div {
+  border: 1px solid var(color-primary);
+  background-color: var(--color-primary);
+}
+.form_checkbox > label {
+  color: var(--text-color);
+  font-size: var(--text-size-s);
+  cursor: pointer;
+}
+.form_button {
+  text-align: center;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.7s;
+}
+.form_button:hover {
+  opacity: 0.7;
+}
+.form_button:active {
+  opacity: 0.3;
+}
+
+.form_subtitle {
+  font-size: var(--text-size-m);
+  font-weight: var(--font-w-400);
+  color: var(--color-secondary);
+  text-align: center;
+  line-height: 150%;
+}
+/* //////////////////////////////////////////////////////// */
+.advantages {
+  display: flex;
+  gap: var(--space-l);
+}
+.advantage {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-4);
+  padding: var(--space-l);
+  gap: var(--space-s);
+
+  width: 100%;
+}
+.advantage_title {
+  font-size: var(--text-size-l);
+  font-weight: var(--font-w-500);
+  color: var(--title-color);
+}
+.advantage_text {
+  font-weight: var(--font-w-400);
+  font-size: var(--text-size-m);
+  color: var(--text-color);
+  line-height: 150%;
+}
+/* //////////////////////////////////////////////////////// */
+.footer {
+  border-top: var(--border-bottom-top);
+  padding: var(--space-l) 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copyright {
+  font-size: var(--text-size-s);
+  color: var(--text-color);
+  display: block;
+  margin-top: var(--space-l);
+}
+.footer_title {
+  font-size: var(--text-size-l);
+  color: var(--title-color);
+  display: block;
+  margin-bottom: var(--space-l);
+}

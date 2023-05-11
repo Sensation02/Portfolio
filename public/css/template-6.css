@@ -35,6 +35,8 @@
 
   display: flex;
   justify-content: center;
+
+  background-image: url(/public/images/wallhaven-weq8y7.png);
 }
 .page_content {
   max-width: 1000px;

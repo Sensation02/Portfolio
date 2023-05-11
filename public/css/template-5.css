@@ -111,16 +111,18 @@
 }
 /* //////////////////////////////////////////////////////// */
 .main {
-  display: flex;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  align-items: start;
+  /* display: grid;
+  grid-template-columns: 2fr 1fr; */
   width: 100%;
   gap: 40px;
-  align-items: start;
-  flex-wrap: wrap;
 }
 /* //////////////////////////////////////////////////////// */
 .messages {
-  max-width: 620px;
-  width: 100%;
+  /* max-width: 620px;
+  width: 100%; */
 }
 .massages_title {
   font-size: var(--text-size-xl);
@@ -168,8 +170,8 @@
 }
 /* //////////////////////////////////////////////////////// */
 .form {
-  width: 100%;
-  max-width: 340px;
+  /* width: 100%;
+  max-width: 340px; */
   position: relative;
 }
 .form_title {
@@ -230,7 +232,6 @@
 .form_button:active {
   opacity: 0.3;
 }
-
 .form_subtitle {
   font-size: var(--text-size-m);
   font-weight: var(--font-w-400);
@@ -282,4 +283,32 @@
   color: var(--title-color);
   display: block;
   margin-bottom: var(--space-l);
+}
+/* //////////////////////////////////////////////////////// */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  /* grid-template-areas:
+    'messages messages form'
+    'messages messages form'; */
+}
+.messages {
+  /* grid-area: messages; */
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.form {
+  /* grid-area: form; */
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
 }

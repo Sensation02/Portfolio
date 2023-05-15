@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url(/public/font/HelveticaNeueBold.ttf);
+}
+/* /////////////////////////////////////////////////// */
+body {
+  font-family: 'HelveticaNeueBold', sans-serif;
+  background-color: var(--bgc-white);
+}
+/* /////////////////////////////////////////////////// */
+:root {
+  --bgc-white: #fff;
+  /* ////////////////////////// */
+  --page-w-l: 1200px;
+  --page-w-m: 1000px;
+  --page-w-s: 700px;
+  /* ////////////////////////// */
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 20px;
+  --space-xl: 24px;
+  --space-xxl: 28px;
+  /* ////////////////////////// */
+}
+/* /////////////////////////////////////////////////// */
+.page {
+  display: grid;
+}
+.page_section {
+  display: flex;
+  justify-content: center;
+}
+.page_content {
+  width: 100%;
+
+  max-width: var(--page-w);
+  padding: var(--space-m);
+
+  display: grid;
+}
+/* /////////////////////////////////////////////////// */
+@media all and (1260px <= width) {
+  .page_content {
+    max-width: var(--page-w-l);
+  }
+}
+
+@media all and (1000px <= width < 1260) {
+  .page_content {
+    max-width: var(--page-w-m);
+  }
+}
+
+@media all and (700px <= width < 1000) {
+  .page_content {
+    max-width: var(--page-w-s);
+  }
+}
+/* /////////////////////////////////////////////////// */

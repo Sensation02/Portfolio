@@ -74,8 +74,7 @@ router.get('/border', function (req, res) {
 
 router.get('/slack', function (req, res) {
   res.render('slack', {
-    layout: 'slack',
-    // layout: null,
+    layout: null,
     page: {
       title: 'slack',
     },

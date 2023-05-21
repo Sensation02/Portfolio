@@ -81,6 +81,15 @@ router.get('/slack', function (req, res) {
   })
 })
 
+router.get('/dashboard', function (req, res) {
+  res.render('dashboard', {
+    layout: null,
+    page: {
+      title: 'dashboard',
+    },
+  })
+})
+
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {

@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <title>
+      {{page.title}}
+    </title>
+    <meta charset='utf-8' />
+    <link rel='manifest' href='fav/site.webmanifest' />
+    <link rel='stylesheet' href='css/normalize.css' />
+    <link href='css/dashboard.css' rel='stylesheet' />
+    <meta
+      name='viewport'
+      content='viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    />
+  </head>
+
+  <body>
+    <div class='page page--dashboard text'>
+      <aside class='page__aside aside'>
+        <div class='aside__logo'>Sidebar</div>
+        <nav class='aside__nav'>
+          <a
+            href='#'
+            class='nav--button nav--button__active click'
+          >
+            <span
+              class='icon nav--button__icon'
+              style='background-image: url(/images/dashboard/home.svg);'
+            ></span>
+            <span
+              class='text text--lh text--light'
+            >Home</span>
+          </a>
+          <a href='#' class='nav--button click'>
+            <span
+              class='icon nav--button__icon'
+              style='background-image: url(/images/dashboard/order.svg);'
+            ></span>
+            <span
+              class='text text--lh text--light'
+            >Orders</span>
+          </a>
+          <a href='#' class='nav--button click'>
+            <span
+              class='icon nav--button__icon'
+              style='background-image: url(/images/dashboard/products.svg);'
+            ></span>
+            <span
+              class='text text--lh text--light'
+            >Products</span>
+          </a>
+        </nav>
+      </aside>
+      <header class='header'>
+        <div class='layout header__content text--small'>
+          <div class='header__search'>
+            <span class='icon header__icon--search'></span>
+            <input
+              type='text'
+              class='field field--header'
+              placeholder='Search'
+            />
+            <span
+              class='icon icon__header--settings icon--radius click'
+            ></span>
+          </div>
+          <div class='header__icons'>
+            <span
+              class='icon header__icon--share icon--radius click'
+            ></span>
+            <span
+              class='icon header__icon--translate icon--radius click'
+            ></span>
+            <span
+              class='icon header__icon--notice icon--radius click'
+            ></span>
+          </div>
+        </div>
+      </header>
+      <main class='main'>
+        <div class='layout'>
+          <section class='box analytic__block'>
+
+            <div
+              class='analytic analytic--double analytic--secondary'
+            >
+              <span
+                class='icon analytic--button icon--button analytic--icon-2 click'
+              ></span>
+              <div class='analytic__content relative'>
+                <span
+                  class='icon arrow absolute top--right'
+                ></span>
+                <h3
+                  class='analytic__title text--light text--bold'
+                >$500.00</h3>
+                <p class='analytic__text text--light'>Total
+                  earning</p>
+              </div>
+            </div>
+            <div
+              class='analytic analytic--double analytic--primary'
+            >
+              <span
+                class='icon analytic--button icon--button analytic--icon-1 click'
+              ></span>
+              <div class='analytic__content'>
+
+                <h3
+                  class='analytic__title text--light text--bold'
+                >$961</h3>
+                <p class='analytic__text text--light'>Total
+                  Order</p>
+              </div>
+            </div>
+            <div class='analytic analytic--primary flex'>
+              <span
+                class='icon analytic--button icon--button analytic--icon-3 click'
+              ></span>
+              <div class='analytic__content'>
+                <h3
+                  class='analytic__title text--light text--bold analytic__title--small'
+                >$203k</h3>
+                <p class='analytic__text text--light'>Total
+                  Income</p>
+              </div>
+            </div>
+            <div
+              class='analytic flex analytic__card--border'
+            >
+              <span
+                class='icon analytic--button icon--button analytic--icon-4 click'
+              ></span>
+              <div class='analytic__content'>
+                <h3
+                  class='analytic__title text--bold analytic__title--small'
+                >$203k</h3>
+                <p
+                  class='analytic__text text--small text--dark'
+                >Total Income</p>
+              </div>
+            </div>
+          </section>
+          <section class='purchase__pay'>
+            <div class='box purchase__block'>
+              <div class='block__item divider'>
+                <h3 class='title--small text--bold'>
+                  Purchase list
+                </h3>
+              </div>
+              <div class='block__item divider'>
+                <div class='purchase__text'>
+                  <p class='text--small'>ID437661</p>
+                  <p class='text--small'>May 11, 2023, 14:21</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>AirOn ProCam</p>
+                  <p class='text--small'>7/8 USB Type-C</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>132.32 EUR</p>
+                  <p class='text--small warning'>Not paid</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>Customer</p>
+                  <p class='text--small'>robin@com.de</p>
+                </div>
+                <div class='purchase__text'></div>
+              </div>
+              <div class='block__item'>
+                <div class='purchase__text'>
+                  <p class='text--small'>ID437661</p>
+                  <p class='text--small'>May 11, 2023, 14:21</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>PHILIPS Essential</p>
+                  <p class='text--small'>HD9200/90</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>543 USD</p>
+                  <p class='text--small success'>Pay by
+                    Stripe</p>
+                </div>
+                <div class='purchase__text'>
+                  <p class='text--small'>Customer</p>
+                  <p class='text--small'>dima@com.ua</p>
+                </div>
+                <div class='purchase__text'></div>
+              </div>
+            </div>
+            <div class='box pay_block'>
+              <div class='block__item divider'>
+                <h3
+                  class='title--small text--bold'
+                >Payment</h3>
+              </div>
+              <div class='block__item--column'>
+                <div class='radio text--small click'>
+                  <input
+                    type='radio'
+                    name='credit'
+                    id=''
+                    checked
+                  />
+                  <div></div>
+                  <label for='credit'>Credit card</label>
+                </div>
+                <div class='radio text--small click'>
+                  <input type='radio' name='credit' id='' />
+                  <div></div>
+                  <label for='credit'>Debit card</label>
+                </div>
+                <div class='radio text--small click'>
+                  <input type='radio' name='credit' id='' />
+                  <div></div>
+                  <label for='credit'>PayPal</label>
+                </div>
+              </div>
+              <div class='divider'>
+                <div class='input__grid'>
+                  <div
+                    class='input__item text--small text--lh'
+                  >
+                    <label for='card_name'>Name on card</label>
+                    <input
+                      type='text'
+                      class='field'
+                      name='card_name'
+                    />
+                  </div>
+                  <div
+                    class='input__item text--small text--lh'
+                  >
+                    <label for='card_name'>Credit card
+                      number</label>
+                    <input
+                      type='text'
+                      class='field'
+                      name='card_name'
+                    />
+                  </div>
+                  <div
+                    class='input__item text--small text--lh'
+                  >
+                    <label
+                      for='card_name'
+                    >Expiration</label>
+                    <input
+                      type='text'
+                      class='field'
+                      name='card_name'
+                    />
+                  </div>
+                  <div
+                    class='input__item text--small text--lh'
+                  >
+                    <label for='card_name'>CVV</label>
+                    <input
+                      type='text'
+                      class='field'
+                      name='card_name'
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class='divider'>
+                <div class='input__grid'>
+                  <div class='input__item'>
+                    <label
+                      for='country_select'
+                      class='text--small'
+                    >Country</label>
+                    <div class='field field--select'>
+                      <span
+                        class='text--small'
+                      >Choose...</span>
+                      <select
+                        name='country_select'
+                        id=''
+                        class='field__select'
+                      >
+                        <option value='1'>Ukraine</option>
+                        <option value='2'>USA</option>
+                        <option value='3'>Poland</option>
+                        <option value='4'>Germany</option>
+                        <option value='5'>Italy</option>
+                      </select>
+                      <span
+                        class='icon icon__select click'
+                      ></span>
+                    </div>
+                  </div>
+                  <div class='input__item'>
+                    <label
+                      for='state_select'
+                      class='text--small'
+                    >State</label>
+                    <div class='field field--select'>
+                      <span
+                        class='text--small'
+                      >Choose...</span>
+                      <select
+                        name='state_select'
+                        id=''
+                        class='field__select'
+                      >
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                      </select>
+                      <span
+                        class='icon icon__select click'
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <button
+                class='pay__button pay__button--text text--lh'
+              >Continue to checkout</button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
